@@ -1,0 +1,62 @@
+<html>
+    <head>
+<title>costumer data</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+    </head>
+    <body class="text-center">
+      <div class="container">
+        <h1 class="m-3">apis data</h1>
+        <input type="text" class="form-control m-3" placeholder="search by name"id="in_name">
+        <input type="text" class="form-control m-3" placeholder="search by number"id="in_number">
+        <table class="table">
+            <thead>
+              <tr>
+               
+                <th scope="col">ID</th>
+                <th scope="col">Customer</th>
+                <th scope="col">Date</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+            <tbody id="tab">
+              
+              
+            </tbody>
+          </table>
+
+      </div>
+
+      <div>
+        <canvas id="myChart"></canvas>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Ahmed Ali', 'Ahmed Ali', 'Aya Elsayed', 'Mina Adel', 'Aya Elsayed', 'Sarah Reda','Mina Adel','Mohamed Sayed','Mohamed Sayed'],
+            datasets: [{
+              label: '# of Votes',
+              data: [1000, 2000, 550, 500, 1300, 750,1250,2500,875],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+      
+
+        <script src="js/index.js"></script>
+    </body>
+</html>
